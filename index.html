@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en" ng-app="chores">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+
+</head>
+
+<body ng-controller="choresController">
+
+        <input type="text" ng-model="query" />
+        <button ng-click = "sortOrder='estTime'">Sort Asc</button>
+        <button ng-click = "sortOrder='-estTime'">Sort Desc</button>
+    <div  ng-repeat="chore in chores | filter:query | orderBy:sortOrder">
+        <ul ng-class-odd="'oddNumber'">
+            <span ng-click="deleteChore($index)">X</span>
+                <li>{{chore.task}}</li>
+                <li>{{chore.dueDate | date}}, {{chore.responsibleParty}},{{chore.estTime}}</li>
+        </ul>
+       
+     
+    </div>
+    <div>
+       <input type="text" ng-model="newTask.task" placeholder = "Task"/></br>
+       <input type="text" ng-model="newTask.dueDate" placeholder = "Due Date"/></br>
+       <input type="text" ng-model="newTask.responsibleParty" placeholder = "Responsible Party" /></br>
+       <input type="text" ng-model="newTask.estTime" placeholder = "Estimated time"/></br>
+       
+       <button ng-click = "addNewChore()">Add Chore</button>
+        
+        
+      </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/components/chores/chores-controller.js"></script>
+
+
+</body>
+
+=======
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+>>>>>>> origin/master
+</html>
